@@ -1,0 +1,50 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 80px;
+}
+
+.grid-item {
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align:center;
+    
+}
+
+.grid-item2 {
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: right;
+    padding: auto;
+   
+    
+}
+
+.grid-item1 {
+    position: relative;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align:left;
+    padding: auto;
+    
+}
+#btn {
+    position: absolute;
+    right: 4px;
+}
+
+
+
+.movie-poster-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    width: 800px;
+    height: 600px;
+    margin: auto;
+
+
+}
