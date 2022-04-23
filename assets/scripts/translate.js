@@ -1,3 +1,8 @@
+//target html main language to translate from and language to translate to
+const language1 = document.getElementById("#fromLanguage");
+const language2 = document.getElementById("#toLanguage");
+
+
 //function to fetch api
 function getLanguages() {
     var myHeaders = new Headers();
@@ -15,4 +20,4 @@ fetch("https://google-translate1.p.rapidapi.com/language/translate/v2/languages"
   .catch(error => console.log('error', error));
 }
 
-//function to extract text from website
+//function to extract text from website 
