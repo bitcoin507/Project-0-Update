@@ -1,5 +1,5 @@
 
-
+//method for fetching api from google translate using rapidapi
 function getLanguages() {
   var myHeaders = new Headers();
   myHeaders.append("X-RapidAPI-Key", "3a9b9beb0amsh0cbdcdada685233p1fdeebjsn7477d1608833");
@@ -14,6 +14,7 @@ function getLanguages() {
       .then(result => createLanguagesList(result.data))
       .catch(error => console.log('error', error));
 }
+//this will create a list of languages for translation using google translate via rapidapi
 function createLanguagesList(langauges) {
   var toLanguage = document.getElementById("toLanguage");
   for (var i = 0; i < langauges.languages.length; i++) {
