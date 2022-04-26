@@ -8,26 +8,29 @@ var movieDataJson;
 var movies = [];
 var movieDoesNotExistlLocally = checkIfMovieAlreadyExists(movieName);
 var multipage=false;
+var movieTitle="";
+var movieOverview="";
 
-getMovieByName(movieName, "1");
-if (multipage==true){
-    getTheRest();
-}
+
+movieToReturn = getMovieByName(movieName, "1");
+//getTheRest();
 
 function getTheRest() {
-
-    //getMoviebyName();
-    // if (movieDoesNotExistlLocally) {
-        // getMovieByName(movieName, "1");
-        // console.log(totalPages);
-        // console.log("wtf");
-        if (totalPages > 1) {
-            //Currently hard coded to  2 pages
-            for (var i = 2; i <= 2; i++) {
-                getMoviebyName(movieName, i);
+    if (multipage==true){
+        getTheRest();
+        //getMoviebyName();
+        // if (movieDoesNotExistlLocally) {
+            // getMovieByName(movieName, "1");
+            // console.log(totalPages);
+            // console.log("wtf");
+            if (totalPages > 1) {
+                //Currently hard coded to  2 pages
+                for (var i = 2; i <= 2; i++) {
+                    getMoviebyName(movieName, i);
+                }
             }
+        
         }
-    // }
 
 }
 
@@ -46,7 +49,14 @@ function checkIfMovieAlreadyExists(movieName) {
     }
 }
 
-
+// function getThePage(response){
+//     console.log(response);
+//     totalPages=response.total_pages;
+//     if(totalPages>1){
+//         multipage=true;
+//         console.log(multipage);
+//     }
+// }
 
 function getMovieByName(movieName, pageNumber) {
 
@@ -59,11 +69,20 @@ function getMovieByName(movieName, pageNumber) {
       
       $.ajax(settings).done(function (response) {
         console.log(response);
-        totalPages=response.total_pages;
-        if(totalPages>1){
-            multipage=true;
-            console.log(multipage);
-        }
+        // totalPages=response.total_pages;
+        // if(totalPages>1)
+        // {
+        //     multipage=true;
+        //     console.log(multipage);
+        // }
+        console.log(response.results[0]);
+        movies=response.results;
+        console.log(movies);
+        //movieToReturn.movieTitle=response.results[0].original_title;
+        //movieToReturn.movieOverview=response.results[0].overview;
+        //return movieToReturn;
+        movieTitle=response.results[0].original_title;
+        movieOverview=response.results[0].overview;
       });
 
     // var movieGetUrl = "https://api.themoviedb.org/3/search/movie?query=" + movieName + "&api_key=5282afd0a67826fac3febca5930766eb&page=" + pageNumber;
