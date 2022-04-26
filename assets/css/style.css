@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -8,35 +12,36 @@
     background-color: whitesmoke;
     border: 1px solid black;
     border-radius: 5px;
-    text-align:center;
-    
+    text-align: center;
 }
 
-.grid-item2 {
+#grid-item1 {
+    position: relative;
     background-color: whitesmoke;
     border: 1px solid black;
     border-radius: 5px;
     text-align: right;
     padding: auto;
-   
-    
 }
 
-.grid-item1 {
+#grid-item2 {
     position: relative;
     background-color: whitesmoke;
     border: 1px solid black;
     border-radius: 5px;
-    text-align:left;
+    text-align: left;
     padding: auto;
-    
 }
-#btn {
+
+#label1 {
     position: absolute;
-    right: 4px;
+    left: 10px;
 }
 
-
+#label2 {
+    position: absolute;
+    left: 10px;
+}
 
 .movie-poster-container {
     border: 1px solid black;
@@ -45,6 +50,9 @@
     width: 800px;
     height: 600px;
     margin: auto;
+}
 
-
+.textArea {
+    width: 100%;
+    height: 100%;
 }
