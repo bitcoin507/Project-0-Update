@@ -6,57 +6,13 @@ var pageNumber=0;
 var totalPages=0;
 var movieDataJson;
 var movies = [];
-//var movieDoesNotExistlLocally = checkIfMovieAlreadyExists(movieName);
 var multipage=false;
 var movieTitle="";
 var movieOverview="";
 
 
 
-//getTheRest();
 
-// function getTheRest() {
-//     if (multipage==true){
-//         //getTheRest();
-//         //getMoviebyName();
-//         // if (movieDoesNotExistlLocally) {
-//             // getMovieByName(movieName, "1");
-//             // console.log(totalPages);
-//             // console.log("wtf");
-//             if (totalPages > 1) {
-//                 //Currently hard coded to  2 pages
-//                 for (var i = 2; i <= 2; i++) {
-//                     getMoviebyName(movieName, i);
-//                 }
-//             }
-        
-//         }
-
-// }
-
-//getLocalMovieData();
-
-//Check local storage to see if we already have some data for this movie
-// function checkIfMovieAlreadyExists(movieName) {
-    
-
-//     var movieData = JSON.parse(localStorage.getItem("movies-" + movieName));
-//     if (movieData == null) {
-//         return true;
-//     }
-//     else {
-//         return false;
-//     }
-// }
-
-// function getThePage(response){
-//     console.log(response);
-//     totalPages=response.total_pages;
-//     if(totalPages>1){
-//         multipage=true;
-//         console.log(multipage);
-//     }
-// }
 
 function getMovieByName(movieName, pageNumber) {
     
