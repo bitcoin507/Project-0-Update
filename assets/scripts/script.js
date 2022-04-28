@@ -10,9 +10,10 @@ var multipage=false;
 var movieTitle="";
 var movieOverview="";
 
-var searchText = document.querySelector("#search");
-var searchButton = document.querySelector("#search-btn");
-var movieToTranslateText = document.querySelector("#movieEnglish");
+//var searchText = document.querySelector("#movieText");
+var input = document.getElementById("movieText");
+// var searchButton = document.querySelector("#search-btn");
+var movieToTranslateText = document.querySelector("#movieDetails");
 
 
 async function getMovieByName(movieName, pageNumber) {
@@ -59,8 +60,8 @@ async function getMovieByName(movieName, pageNumber) {
 
 
 const onSearchMovie = () => {
-    console.log (`Searching for Movie: ${searchText.value}`);
-    getMovieByName(searchText.value, 1)
+    console.log (`Searching for Movie: ${input.value}`);
+    getMovieByName(input.value, 1)
 
     .then(function () {
 
@@ -69,7 +70,18 @@ const onSearchMovie = () => {
     })
 }
 
-searchButton.addEventListener("click", onSearchMovie)
+//searchButton.addEventListener("click", onSearchMovie)
+
+
+
+input.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        onSearchMovie();
+    }
+});
+
+
+
 // searchButton.addEventListener("click", function (event) {
 //     event.preventDefault();
 //     movieName = searchText.value;
