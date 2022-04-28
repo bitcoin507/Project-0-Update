@@ -25,4 +25,32 @@ function createLanguagesList(langauges) {
         toLanguage.add(option);
     }
 }
+
+function doTranslation(textToTranlsate, languageId) {
+
+    var myHeaders = new Headers();
+    myHeaders.append("Accept-Encoding", "application/gzip");
+    myHeaders.append("X-RapidAPI-Host", "google-translate1.p.rapidapi.com");
+    myHeaders.append("X-RapidAPI-Key", "0b7abf8e78msha3ce1f6a5cc24ffp10e0bdjsn5c64b154c100");
+    myHeaders.append("content-type", "application/x-www-form-urlencoded");
+    
+    var urlencoded = new URLSearchParams();
+    urlencoded.append("q", textToTranlsate);
+    urlencoded.append("target", languageId);
+    urlencoded.append("source", "en");
+    
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: urlencoded,
+      redirect: 'follow'
+    };
+    
+    fetch("https://google-translate1.p.rapidapi.com/language/translate/v2", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+
+
+}
 getLanguages();
