@@ -74,11 +74,7 @@ const onSearchMovie = () => {
 
 
 
-input.addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-        onSearchMovie();
-    }
-});
+
 
 
 
