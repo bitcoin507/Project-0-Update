@@ -73,6 +73,11 @@ const onSearchMovie = () => {
 //searchButton.addEventListener("click", onSearchMovie)
 
 
+input.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        onSearchMovie();
+    }
+});
 
 
 

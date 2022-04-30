@@ -16,7 +16,7 @@ function getLanguages() {
 /*this will create a list of languages for translation using google translate via rapidapi
 when drop-down menu is clicked*/
 function createLanguagesList(langauges) {
-    var toLanguage = document.getElementById("#toLanguage");
+    var toLanguage = document.getElementById("toLanguage");
     for (var i = 0; i < langauges.languages.length; i++) {
         var language = langauges.languages[i]
         var option = document.createElement("option");
@@ -55,9 +55,9 @@ function doTranslation(textToTranlsate, languageId) {
 }
 getLanguages();
 
-  var input = document.getElementById("movieText");
-input.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        alert('Working');
-    }
-});
+//   var input = document.getElementById("movieText");
+// input.addEventListener("keypress", function(event) {
+//     if (event.key === "Enter") {
+//         alert('Working');
+//     }
+// });
