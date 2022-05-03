@@ -63,6 +63,7 @@ async function getMovieByName(movieName, pageNumber) {
 
 
 const onSearchMovie = () => {
+    movies.length=0;
     console.log (`Searching for Movie: ${input.value}`);
     getMovieByName(input.value, 1)
 
