@@ -10,6 +10,7 @@ var multipage=false;
 var movieTitle="";
 var movieOverview="";
 var posterUrl="https://image.tmdb.org/t/p/w500";
+var searchButton=document.getElementById("doSearch");
 
 //var searchText = document.querySelector("#movieText");
 var input = document.getElementById("movieText");
@@ -82,19 +83,20 @@ const onSearchMovie = () => {
         moviePosterContainer.style.backgroundImage = "url(" + movies[0].poster_path + ")";
         moviePosterContainer.style.width = "500px";
         moviePosterContainer.style.height = "800px";
-        //moviePosterContainer.style.backgroundImage = url(movies[0].poster_path);   //.posterUrl=movies[0].poster_path;
+        moviePosterContainer.style.backgroundImage = url(movies[0].poster_path);   //.posterUrl=movies[0].poster_path;
     })
 }
 
 //searchButton.addEventListener("click", onSearchMovie)
 
 
-input.addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-        onSearchMovie();
-    }
-});
+// input.addEventListener("keypress", function (event) {
+//     if (event.key === "Enter") {
+//         onSearchMovie();
+//     }
+// });
 
+searchButton.addEventListener("click", onSearchMovie); 
 
 
 

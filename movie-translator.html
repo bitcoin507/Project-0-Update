@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/bulma.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> -->
+  <link rel="stylesheet" href="/assets/css/stylet.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="hero is-primary mb-5 is-fullheigh">
+    <div class="hero-body">
+      <p class="title">
+        Movie Synopsis Translator
+      </p>
+      <p class="subtitle">
+        Saving the world, one translation at a time
+      </p>
+    </div>
+  </section>
+  <div class="field">
+    <label class="label p-2">Film Name</label>
+    <div class="control p-2">
+      <input id="movieText" class="input form-control" type="text" placeholder="Text input">
+    </div>
+    <div class="column is-narrow p-2 translator">
+      <button id="doSearch" class="button">Search</button>
+    </div>
+  </div>
+  <div class="select translator p-2">
+    <select id="toLanguage">
+      <option value="af">Afrikaans</option>
+      <option value="fr">French</option>
+      <option value="de">German</option>
+
+    </select>
+  </div>
+  <div class="columns is-mobile is-multiline is-centered">
+    <div class="column p-5">
+      <textarea id="movieDetails" class="textarea" rows="10" placeholder="e.g. Hello world"></textarea>
+    </div>
+    <div id="doTranslate" class="column is-narrow p-5 translator">
+      <button class="button">Translate-></button>
+    </div>
+    <div class="column p-5">
+      <textarea id="movieTranslation" class="textarea" rows="10" placeholder="e.g. Hello world"></textarea>
+    </div>
+  </div>
+  <div id="moviePosterContainer" class="movie-poster-container container form-control">
+    <div class="movie-poster"></div>
+
+  </div>
+  <script src="./assets/scripts/script.js"></script>
+  <script src="./assets/scripts/translate.js"></script>
+</body>
+
+</html>
