@@ -7,6 +7,6 @@
     max-width: 400px;
     width: 400px;
 }
-.hero{
-    background:url(/assets/images/movieBackLarge.jpg);
+.hero-image{
+    background: url(/assets/images/movieBackLarge.jpg);
 }
