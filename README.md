@@ -2,6 +2,10 @@
 Our First Team Project
 
 ## Description
+This project translates movies into a language of your choice.
+
+## Screen Grab
+![](/assets/images/screenGrab.png)
 
 ## API's
 
