@@ -7,6 +7,9 @@ This project translates movies into a language of your choice.
 ## Screen Grab
 ![](/assets/images/screenGrab.png)
 
+## Deployment
+https://chrisaylen.github.io/Project-1-Fork/
+
 ## API's
 
 ### Movie API
