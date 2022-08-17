@@ -8,7 +8,7 @@ This project translates movies into a language of your choice.
 ![](/assets/images/screenGrab.png)
 
 ## Deployment
-https://bitcoin507.github.io/Project-0-Update/)
+https://bitcoin507.github.io/Project-0-Update/
 
 ## API's
 
